@@ -7,6 +7,10 @@ jobs:
 
     timeout-minutes: 10
 
+    defaults:
+      run:
+        shell: bash -l {0}
+
     steps:
       - uses: actions/checkout@v3
       - name: check system
@@ -24,5 +28,6 @@ jobs:
       - name: run
         run: |
           which conda 
+          conda init bash
           conda activate base
           bash test.sh
