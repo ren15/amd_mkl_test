@@ -23,4 +23,6 @@ jobs:
 
       - name: run
         run: |
+          which conda 
+          conda activate base
           bash test.sh
