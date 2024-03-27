@@ -18,4 +18,4 @@ jobs:
 
       - name: run
         run: |
-          python --version
+          bash test.sh
