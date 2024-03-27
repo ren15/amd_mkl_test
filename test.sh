@@ -24,7 +24,7 @@ EOF
 
 gcc -shared -fPIC -o libfakeintel.so fakeintel.c
 
-conda install -c defaults --override-channels numpy
+conda install -c defaults --override-channels numpy -y
 
 echo "No LD_PRELOAD"
 python mkl_amd_hack.py
