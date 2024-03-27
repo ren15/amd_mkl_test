@@ -30,4 +30,4 @@ echo "No LD_PRELOAD"
 python mkl_amd_hack.py
 
 echo "Has LD_PRELOAD"
-LD_PRELOAD=/path/to/libfakeintel.so python mkl_amd_hack.py
+LD_PRELOAD=${PWD}/libfakeintel.so python mkl_amd_hack.py
