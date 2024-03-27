@@ -1,0 +1,21 @@
+name: ci
+on: push
+
+jobs:
+  run:
+    runs-on: ubuntu-22.04
+
+    timeout-minutes: 10
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: check system
+        run: |
+          lscpu
+          free -h
+          df -h 
+          cat /etc/os-release
+
+      - name: run
+        run: |
+          python --version
